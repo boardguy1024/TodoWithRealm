@@ -13,7 +13,7 @@
         <!--Todo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TodoWithRealm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TodoListViewController" customModule="TodoWithRealm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -52,15 +52,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="COL-uL-AKL" id="yfB-Er-ydk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="956" y="792.95352323838085"/>
         </scene>
-        <!--View Controller-->
+        <!--Input View Controller-->
         <scene sceneID="JiW-5f-NHG">
             <objects>
-                <viewController id="JXO-Zg-nBQ" sceneMemberID="viewController">
+                <viewController id="JXO-Zg-nBQ" customClass="InputViewController" customModule="TodoWithRealm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P48-RT-15e"/>
                         <viewControllerLayoutGuide type="bottom" id="tr6-Sw-qPW"/>
@@ -87,6 +90,9 @@
                                         <state key="normal" title="Add">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="JXO-Zg-nBQ" eventType="touchUpInside" id="1i8-38-xZz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -98,6 +104,10 @@
                             <constraint firstItem="Cni-MK-cwf" firstAttribute="centerX" secondItem="f9m-Ha-YRj" secondAttribute="centerX" id="RzC-hu-SXj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="J5h-Kh-UJg" id="uIO-Pb-27B"/>
+                        <outlet property="inputTextField" destination="YBW-DA-RAo" id="0kJ-y6-zHO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQd-YA-uCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
